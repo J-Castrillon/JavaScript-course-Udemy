@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript" src="JQuery/libreria/jquery-3.6.0.min.js"></script> <!-- Librería -->
+    <script type="text/javascript" src="JQuery/AJAX/peticiones.js"></script>
+
+    <link rel="stylesheet" href="styles/style.css">
+
+    <style>
+        .con_borde {
+            border: 4px dashed black;
+        }
+
+        .tamaño {
+            font-size: 10px;
+        }
+
+        .caja {
+            width: 150px;
+            height: 150px;
+            border: 2px solid black;
+            display: flex;
+            transition: 300ms;
+            /* Efecto de milisegundos en realizar una acción */
+        }
+
+        #name:focus {
+            border: 2px solid green;
+        }
+
+        .sigueme {
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            background: yellow;
+            opacity: 0.5;
+            border-radius: 999px;
+            border: 2px solid black;
+        }
+    </style>
+
+    <title>JQuery</title>
+</head>
+
+<body>
+    <h1 id="titulo">Estamos trabajando con JQuery</h1>
+    <h2 id="subtitulo">Modificando con selectores</h2>
+
+    <hr>
+
+    <p class="con_borde">Comenzando</p>
+    <p class="aplicar">Comenzando</p>
+    <p class="con_borde">Comenzando</p>
+    <p class="aplicar">Comenzando</p>
+
+    <!-- <ul>
+        <li><a href="https://www.google.com/" title="google" target="_blank">Ir a google</a></li>
+        <li><a href="https://www.facebook.com" title="Facebook" target="_blank">Ir a facebook</a></li>
+    </ul> -->
+
+    <hr>
+    <center>
+        <h3 class="Events">Eventos</h3>
+    </center>
+
+    <div class="caja">
+        <div class="sigueme">
+
+        </div>
+    </div>
+
+    <br>
+
+    <form action="">
+        <label for="name">Escriba su nombre:</label><br>
+        <input type="text" name="name" id="name">
+    </form>
+
+
+    <hr>
+    <center>
+        <h3>DOM</h3>
+    </center>
+    <div class="pages">
+
+        <label for="entrada">Ingresa algún link para añadir</label><br>
+        <input type="text" name="entrada" id="entrada">
+        <button id="enlazar">Añadir</button>
+
+        <ul id="lista">
+            <li><a href="https://www.google.com" id="google" target="_blanck"></a></li>
+            <li><a href="https://www.facebook.com" id="facebook" target="_blanck"></a></li>
+            <li><a href="https://www.linkedin.com" id="linkedin" target="_blanck"></a></li>
+            <li><a href="https://www.twitter.com" id="twitter" target="_blanck"></a></li>
+        </ul>
+
+    </div>
+
+    <hr>
+
+    <h3>Método .get() obteniendo información</h3>
+
+    <div id="loadAjax">
+
+    </div>
+
+    <h3>Método .post() enviando información</h3>
+    <div id="enviar">
+        <form action="https://reqres.in/api/users" method="POST" id="post">
+            <label for="name">Ingresa tu nombre</label>
+            <input type="text" name="name" id="nombre">
+            <label for="email">Ingresa tu email</label>
+            <input type="text" name="email" id="correo">
+            <input type="submit" value="Enviar" id="sub">
+        </form>
+    </div>
+</body>
+
+</html>

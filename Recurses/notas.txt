@@ -1,0 +1,50 @@
+JQUERY: Permite simplificar la manera de interactuar con los documentos HTML, 
+manipular el árbol DOM, manejar eventos, desarrollar animaciones y agregar interacción con la técnica AJAX a páginas web; 
+
+Integración de JQUERY: 
+https://code.jquery.com/jquery-3.6.0.min.js  JQuery download en la página oficial; 
+podemos obtenerla a través del link derecto, o la otra forma es guardar 
+el script como librería en el proyecto para que sea una integración local; (ctrl + u, click en el link y guardar como fichero en una carpeta); 
+
+Para probar que si quedó integrado correctamente: 
+dentro de una etiqueta script en el html, $(document).ready(()=>{
+    console.log("Integrado correctamente"); 
+}); 
+
+elemento.attr("href"); 
+La función attr obtiene lo que tenga la propiedad que le estamos indicando 
+En este caso sería el href que tiene la etiqueta a;
+ej: "https://www.google.com"; 
+
+
+FUNCIONES: 
+.val(); Es como el .value() normal en javascript; 
+.attr(""); obtiene el valor de la propiedad de una etiqueta ej: un href=""; O asgina un valor a las propiedades pasándolas como parámetros con clave valor;  
+.append(), prepend(); añade al final o al principio de un arreglo de datos; 
+.hide(""); Esconde un elemento; 
+.show(""); Muestra un elemento; 
+.fadeIn(""); Muestra un elemento; 
+.fadeOut(""); Esconde un elemento;  
+.fadeTo(velocidad,opacidad); Podemos utilizarlo para desaparecer y aparecer elementos;  
+.toggle(""); esconde y aparece un elemento; 
+.fadeToggle(""); Esconde y aparece un elemento con otro efecto; 
+.slideToggle(""); Despliegue como transición aparece y desaparece; 
+.slideDown(""); Aparece un elemento; 
+.slideUp(""); Esconde un elemento; 
+.preventDefault; No permite que se recargue o que haya una redirección en la página; <- Tener en cuenta el uso de la variable que lleva la función como parámetro; e.preventDefault();  
+La función de flecha no es funcional en JQuery; 
+
+Nota: Podemos realizar funciones de callbacks dentro de los efectos; Estas funciones de callbacks, se 
+ejecutan al culminar el tiempo en que se produce el efecto; 
+ejemplo: 
+frame.hide("slow",function(){
+    console.log("Hemos terminado de ocultar el frame"); 
+})
+
+Métodos de transferencia de datos y peticiones, POST() Y GET(); 
+El método get(), nos sirve para por medio de la url de la api, obtener datos de ella; 
+El método post(), nos sirve para por medio de la url de la api, pisar, o enviarle y establecer datos locales a la api; 
+como lo sería por ejemplo, crearle un nuevo objeto JSON; 
+
+
+
